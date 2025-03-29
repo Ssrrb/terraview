@@ -1,0 +1,50 @@
+/* global.css */
+
+/* If your linter complains about unknown at-rules (like @apply),
+   you can disable the rule below. This is useful if you’re using ESLint
+   or Stylelint on your CSS files. */
+/* eslint-disable css/at-rule-no-unknown */
+
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Theme Variables */
+:root {
+  --green-color: #10B981; /* Tailwind green-500 */
+  --red-color:   #EF4444; /* Tailwind red-500 */
+  --radius:      0.625rem;
+}
+
+/* Global Base Styles */
+body {
+  @apply bg-white text-gray-800 antialiased;
+}
+
+/* Example Component: Card */
+.card {
+  @apply p-4 bg-white rounded-lg shadow-md;
+}
+
+/* Example Button Styles */
+.btn {
+  @apply px-4 py-2 font-semibold rounded-lg transition duration-200;
+}
+
+.btn-green {
+  @apply bg-green-500 text-white hover:bg-green-600;
+}
+
+.btn-red {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+/* Custom Utility Classes */
+.text-green {
+  color: var(--green-color);
+}
+
+.text-red {
+  color: var(--red-color);
+}
